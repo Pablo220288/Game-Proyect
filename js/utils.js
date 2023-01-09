@@ -12,16 +12,16 @@ export class Utils {
         context.shadowColor = 'black'
         context.shadowBlur = 0
         context.font = this.fontSize + 'px ' + this.fontFamily
-        context.textAlign = 'left'
+        context.textAlign = 'center'
         context.fillStyle = this.game.fontColor
         //Score
-        context.fillText('Score: ' + this.game.score, 20 , 50)
+        context.fillText('Score: ' + this.game.score, this.game.width * 0.5 , 50)
         //Time
-        context.font = this.fontSize * 0.8 + 'px ' + this.fontFamily
-        context.fillText('Time: ' + (this.game.time * 0.001).toFixed(1), 20 , 80)
+        context.textAlign = 'left'
+        context.fillText('Time: ' + (this.game.time * 0.001).toFixed(1), 610, 50)
         //Lives
         for(let i = 0; i < this.game.lives; i++){
-            context.drawImage(this.liveImage, 30 * i + 20, 95, 25, 25)
+            context.drawImage(this.liveImage, 30 * i + 20, 30, 25, 25)
         }
         //Game Over Message
         if(this.game.gameOver){
@@ -29,12 +29,14 @@ export class Utils {
             context.font = this.fontSize * 1.4 + 'px ' + this.fontFamily
             if(this.game.score > this.game.winningScore){
                 context.fillText('Boo-yah', this.game.width * 0.5, this.game.height * 0.5)
-                context.font = this.fontSize * 0.6 + 'px ' + this.fontFamily
-                context.fillText('What are creature of the night afraid of? YOU!!!', this.game.width * 0.5, this.game.height * 0.5 + 40)
+                context.font = this.fontSize * 0.7 + 'px ' + this.fontFamily
+                context.fillText('Quien es el amo de las bestias? tuuu!!!', this.game.width * 0.5, this.game.height * 0.5 + 40)
+                context.font = this.fontSize * 0.5 + 'px ' + this.fontFamily
+                context.fillText('GRACIAS POR JUGAR MI JUEGO', this.game.width * 0.5, this.game.height * 0.5 + 80)
             }else{
                 context.fillText('GAME OVER', this.game.width * 0.5, this.game.height * 0.5)
                 context.font = this.fontSize * 0.6 + 'px ' + this.fontFamily
-                context.fillText('Better luky next time!', this.game.width * 0.5, this.game.height * 0.5 + 40)
+                context.fillText('Mejor suerte la proxima!', this.game.width * 0.5, this.game.height * 0.5 + 40)
             }
         }
         context.restore()

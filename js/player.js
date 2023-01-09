@@ -23,6 +23,12 @@ export class Player {
         this.states = [new Sitting(this.game), new Running(this.game), new Junping(this.game), new Falling(this.game), new Standing(this.game), new Rolling(this.game), new Diving (this.game), new Hit (this.game)]
         this.currentState = null
     }
+    restart(){
+        this.x = 0;
+        this.y = this.game.height - this.height - this.game.groundMargin;
+        this.frameY = 0
+        this.maxFrame = 5
+    }
     update(input, deltaTime){
         this.checkCollision()
         this.currentState.handleInput(input)
@@ -74,7 +80,7 @@ export class Player {
                 this.game.collisions.push(new CollisionAnimation(this.game, enemy.x + enemy.width * 0.5, enemy.y + enemy.height * 0.5))
                 if(this.currentState === this.states[5] || this.currentState === this.states[6]){
                     this.game.score++
-                    this.game.floatingMessage.push(new FloatingMessage('+1', enemy.x, enemy.y, 170 ,50))
+                    this.game.floatingMessage.push(new FloatingMessage('+1', enemy.x, enemy.y, this.game.width * 0.5 ,80))
                 }else{
                     this.setState(7, 0)
                     this.game.score-=1

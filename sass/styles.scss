@@ -10,22 +10,79 @@
 body {
     overflow: hidden;
     main {
-        canvas {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 5px solid black;
-            max-width: 100%;
-            max-height: 100%;
+        .main-container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .info-game-container{
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 0px 30px;
+                .game-title{
+                    font-size: 3rem;
+                }
+                .game-info{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    margin-bottom: 20px;
+                    h4{
+                        font-size: 1.2rem;
+                        margin-bottom: 5px;
+                    }
+                    .movement{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+                        margin-left: 10px;
+                        ion-icon{
+                            font-size: 2rem;
+                        }
+                    }
+                    h2{
+                        width: 2rem;
+                        height: 2rem;
+                        font-family: 'Poppins', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+                #comenzar{
+                    all: unset;
+                    margin-top: 20px;
+                    align-self: center;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
+                    
+                }         
+            }
+            canvas {
+                border: 5px solid black;
+                width: 800px;
+                height: 500px;
+                max-width: 100%;
+                max-height: 100%;
+            }
         }
         img {
             display: none;
         }
         #loading {
             position: absolute;
+            background-color: white;
             top: 50%;
             width: 100%;
+            height: 100vh;
             text-align: center;
         }
     }

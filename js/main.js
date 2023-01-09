@@ -3,14 +3,20 @@ import { InputHandler } from './input.js'
 import { Background } from './background.js';
 import { FlyingEnemy,GroundEnemy,ClimbingEnemy } from './enemies.js';
 import { Utils } from './utils.js';
-import { CollisionAnimation } from "./collisionAnimation.js";
+
+const loading = document.getElementById('loading');
+window.addEventListener('load', () => {
+    loading.style.display = 'none';
+})
+
+const comenzar = document.getElementById('comenzar')
+
+
 
 window.addEventListener('load', () => {
-    const loading = document.getElementById('loading');
-    loading.style.display = 'none';
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
-    canvas.width = 900;
+    canvas.width = 800;
     canvas.height = 500;
 
     class Game {
@@ -113,3 +119,7 @@ window.addEventListener('load', () => {
     }
     animate(0)
 })
+
+const restartGame = () => {
+    this.player.restart()
+}

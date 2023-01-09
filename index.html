@@ -1,37 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Fox</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sass/css/styles.css">
-</head>
-<body>
-<header></header>
-<main>
-    <canvas id="canvas1"></canvas>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/css/styles.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="main-container">
+        <div class="info-game-container">
+          <h1 class="game-title">Crazy Dog</h1>
+          <div class="game-info">
+            <h4>Movimiento</h4>
+            <div class="movement">
+              <ion-icon name="arrow-up-circle-outline"></ion-icon>
+              <p>Saltar</p>
+            </div>
+            <div class="movement">
+              <ion-icon name="arrow-forward-circle-outline"></ion-icon>
+              <p>Avanzar</p>
+            </div>
+            <div class="movement">
+              <ion-icon name="arrow-down-circle-outline"></ion-icon>
+              <p>Agacharse</p>
+            </div>
+            <div class="movement">
+              <ion-icon name="arrow-back-circle-outline"></ion-icon>
+              <p>Retroceder</p>
+            </div>
+            <div class="movement">
+              <h2>A</h2>
+              <p>Atacar</p>
+            </div>
+          </div>
+          <div class="game-info">
+            <h4>Objetivo</h4>
+            <p>Destruir a 40 o mas enemigos.</p>
+            <p>Tienes 30 Segundos.</p>
+          </div>
+          <button id="comenzar">Comenzar</button>
+        </div>
+        <canvas id="canvas1"></canvas>
+      </div>
 
-    <img id="playerImage" src="assets/player.png" alt="Palyer">
-    <img id="leyer1" src="assets/layer-6.png" alt="Background">
-    <img id="leyer2" src="assets/layer-7.png" alt="Background">
-    <img id="leyer3" src="assets/layer-8.png" alt="Background">
-    <img id="leyer4" src="assets/layer-9.png" alt="Background">
-    <img id="leyer5" src="assets/layer-10.png" alt="Background">
-    <img id="fly_enemy" src="assets/beEnemy2.png" alt="Bee">
-    <img id="monster_enemy" src="assets/monsterEnemy2.png" alt="Monster">
-    <img id="marcian_enemy" src="assets/marcianEnemy2.png" alt="Marcian">
-    <img id="bubble" src="assets/bubble2.png" alt="Fire">
-    <img id="collisionAnimation" src="assets/boom.png" alt="Boom">
-    <img id="live" src="assets/live.jpg" alt="Live">
+      <img id="playerImage" src="assets/player.png" alt="Palyer" />
+      <img id="leyer1" src="assets/layer-6.png" alt="Background" />
+      <img id="leyer2" src="assets/layer-7.png" alt="Background" />
+      <img id="leyer3" src="assets/layer-8.png" alt="Background" />
+      <img id="leyer4" src="assets/layer-9.png" alt="Background" />
+      <img id="leyer5" src="assets/layer-10.png" alt="Background" />
+      <img id="fly_enemy" src="assets/beEnemy2.png" alt="Bee" />
+      <img id="monster_enemy" src="assets/monsterEnemy2.png" alt="Monster" />
+      <img id="marcian_enemy" src="assets/marcianEnemy2.png" alt="Marcian" />
+      <img id="bubble" src="assets/bubble2.png" alt="Fire" />
+      <img id="collisionAnimation" src="assets/boom.png" alt="Boom" />
+      <img id="live" src="assets/live.jpg" alt="Live" />
 
-
-    <h2 id="loading"> loading...</h2>
-</main>
-<footer></footer>
+      <h2 id="loading">loading...</h2>
+    </main>
+    <footer></footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script type="module" src="js/main.js"></script>
-</body>
+  </body>
 </html>

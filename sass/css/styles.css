@@ -3,18 +3,72 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Bungee Spice", cursive;
 }
 
 body {
   overflow: hidden;
 }
-body main canvas {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+body main .main-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .main-container .info-game-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 30px;
+}
+body main .main-container .info-game-container .game-title {
+  font-size: 3rem;
+}
+body main .main-container .info-game-container .game-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+body main .main-container .info-game-container .game-info h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+body main .main-container .info-game-container .game-info .movement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+body main .main-container .info-game-container .game-info .movement ion-icon {
+  font-size: 2rem;
+}
+body main .main-container .info-game-container .game-info h2 {
+  width: 2rem;
+  height: 2rem;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .main-container .info-game-container #comenzar {
+  all: unset;
+  margin-top: 20px;
+  align-self: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
+}
+body main .main-container canvas {
   border: 5px solid black;
+  width: 800px;
+  height: 500px;
   max-width: 100%;
   max-height: 100%;
 }
@@ -23,8 +77,10 @@ body main img {
 }
 body main #loading {
   position: absolute;
+  background-color: white;
   top: 50%;
   width: 100%;
+  height: 100vh;
   text-align: center;
 }
 
